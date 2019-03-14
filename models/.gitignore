@@ -1,1 +1,4 @@
-*.cnn
+3_DB_DBSingleImg_300_epoch-86.cnn
+kaggleDiabeticRetinopathy1_epoch-80.cnn
+kaggleDiabeticRetinopathy2_epoch-76.cnn
+kaggleDiabeticRetinopathy3_epoch-80.cnn
