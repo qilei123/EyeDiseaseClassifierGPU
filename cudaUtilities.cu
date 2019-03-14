@@ -59,14 +59,11 @@ int initializeGPU(int pciBusID) { //pciBusID, or -1 for the first device
   int deviceID=-1;
   pciBusID =-1;
   cudaSafeCall(cudaGetDeviceCount(&nGPU));
-  std::cout<<nGPU<<std::endl;
   for (int i=0;i<nGPU;i++) {
     cudaDeviceProp prop;
     cudaSafeCall(cudaGetDeviceProperties(&prop, i));
-    std::cout<<pciBusID<<std::endl;
     if (i==0 and pciBusID==-1)
       pciBusID=prop.pciBusID;
-    std::cout<<pciBusID<<std::endl;
     if (prop.pciBusID==pciBusID) {
       std::cout << "*";
       cudaSafeCall(cudaSetDevice(i));
@@ -76,7 +73,6 @@ int initializeGPU(int pciBusID) { //pciBusID, or -1 for the first device
     }
     std::cout << prop.pciBusID << " " << prop.name<< " " << (prop.totalGlobalMem>>20) << "MB Compute capability: " << prop.major << "." << prop.minor << std::endl;
   }
-  std::cout<<deviceID<<std::endl;
   assert(deviceID>=0);
   cublasError(cublasCreate(&cublasHandle),__FILE__,__LINE__);
   cnnMemStream = new cudaMemStream();
