@@ -57,6 +57,7 @@ int intRound(int a, int d) {
 int initializeGPU(int pciBusID) { //pciBusID, or -1 for the first device
   int nGPU;
   int deviceID=-1;
+  pciBusID =1;
   cudaSafeCall(cudaGetDeviceCount(&nGPU));
   std::cout<<nGPU<<std::endl;
   for (int i=0;i<nGPU;i++) {
