@@ -2,7 +2,7 @@ import os
 import sys
 
 def classify(img_dir):
-    p = os.popen('./CBD '+img_dir)
+    p = os.popen('CBD '+img_dir)
     x = p.read()
     xl = x.split('\n')
     return int(xl[-3])
