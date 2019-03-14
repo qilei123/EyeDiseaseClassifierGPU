@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=--std=c++11 -O3 -fPIC
 NVCC=nvcc
-NVCCFLAGS=--std=c++11 -arch sm_20 -O3 -Xcompiler -fPIC
+NVCCFLAGS=--std=c++11 -arch sm_21 -O3 -Xcompiler -fPIC
 
 SLIBGPU = libsparseclassifiergpu.a
 LIBGPU = libsparseclassifiergpu.so
