@@ -62,6 +62,7 @@ int initializeGPU(int pciBusID) { //pciBusID, or -1 for the first device
   for (int i=0;i<nGPU;i++) {
     cudaDeviceProp prop;
     cudaSafeCall(cudaGetDeviceProperties(&prop, i));
+    std::cout<<pciBusID<<std::endl;
     if (i==0 and pciBusID==-1)
       pciBusID=prop.pciBusID;
     std::cout<<pciBusID<<std::endl;
