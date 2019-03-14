@@ -3,7 +3,7 @@ import sys
 from os.path import abspath, join, dirname
 sys.path.insert(0, abspath(dirname(__file__)))
 sys.path.append(abspath(dirname(__file__)))
-os.system('export PATH=$PATH:'+str(dirname(__file__)))
+os.popen('export PATH=$PATH:'+str(dirname(__file__)))
 print abspath(dirname(__file__))
 def classify(img_dir):
     p = os.popen('CBD '+img_dir)
