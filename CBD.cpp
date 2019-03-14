@@ -1,7 +1,7 @@
 #include "SparseClassifier.h"
 #include <time.h>
 int main(int argc, char *argv[]) {
-	std::string store_path("/home/ubuntu/EyeDiseaseClassifierGPU/models/");
+	std::string store_path("./models/");
 
 	std::string baseName;
 	if(NET_TYPE==3)

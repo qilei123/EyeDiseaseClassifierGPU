@@ -1,6 +1,7 @@
 import os
 import sys
-
+from os.path import abspath, join, dirname
+sys.path.insert(0, abspath(dirname(__file__)))
 def classify(img_dir):
     p = os.popen('CBD '+img_dir)
     x = p.read()
