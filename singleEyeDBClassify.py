@@ -9,6 +9,6 @@ def classify(img_dir):
 
 def main():
     for i in range(10):
-        print classify('921607893.jpg')
+        print classify('/home/ubuntu/EyeDiseaseClassifierGPU/921607893.jpg')
 
 main()
