@@ -11,4 +11,4 @@ def main():
     for i in range(10):
         print classify('./921607893.jpg')
 
-#main()
+main()
