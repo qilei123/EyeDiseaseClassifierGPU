@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 	//{
 	//i++;
 	std::cout<<argv[1]<<std::endl;
-	result=edc->Classify(std::string(argv[1]),2);
+	result=edc->Classify("./921607893.jpg",2);
 	std::cout<<result<<std::endl;
 
 	finish = clock();
